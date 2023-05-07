@@ -1,0 +1,39 @@
+.header {
+    padding: 6rem;
+    background-color: $color_secondary;
+    grid-row: header-start / header-end;
+    grid-column: 1/-1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 3rem;
+
+    &_content {
+
+        &-title {
+            font-size: 6rem;
+            margin-bottom: 3rem;
+        }
+
+        &-text {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &_images {}
+
+    &-image {
+        // grid-row: 2/ -1;
+        width: 150%;
+    }
+
+    &_btn {
+        margin-bottom: 3rem;
+
+        &-text {
+            font-size: 2rem;
+        }
+    }
+}

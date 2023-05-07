@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 20em) {
+    html {
+      font-size: 40%; } }
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-display: swap;
+  color: #2e475d;
+  font-weight: 300;
+  line-height: 1.6; }
+
+.container {
+  width: 120rem;
+  margin: 0 auto;
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: repeat(8, [col-start] minmax(min-content, 14rem) [col-end]);
+  grid-template-rows: [sidebar-start] 10vh [sidebar-end header-start] max-content [header-end about-start] 1fr [about-end statistics-start] 1fr [statistics-end feature-start] 1fr [feature-end footer-start] 1fr [header-end about-start]; }
+
+h1,
+h3,
+h4, .btn {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600; }
+
+h1,
+h3,
+h4 {
+  color: #2e475d;
+  line-height: 1; }
+
+p {
+  color: #2e475d; }
+
+.btn {
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 2rem 4rem;
+  cursor: pointer;
+  transition: all .2s; }
+  .btn-color {
+    background-color: #ff5c35;
+    margin-right: 2rem; }
+    .btn-color-long {
+      text-align: center;
+      width: 100%; }
+  .btn-white {
+    background-color: #fff;
+    color: #ff5c35;
+    outline: 1px solid #ff5c35; }
+    .btn-white:hover {
+      background-color: #ff5d3522; }
+  .btn:hover {
+    background-color: #ff5d3559; }
+
+.sidebar {
+  background-color: #ba80f1;
+  grid-row: sidebar-start / sidebar-end;
+  grid-column: 1/-1; }
+
+.header {
+  padding: 6rem;
+  background-color: #fef4ea;
+  grid-row: header-start / header-end;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem; }
+  .header_content-title {
+    font-size: 6rem;
+    margin-bottom: 3rem; }
+  .header_content-text {
+    font-size: 2rem;
+    margin-bottom: 3rem; }
+  .header-image {
+    width: 150%; }
+  .header_btn {
+    margin-bottom: 3rem; }
+    .header_btn-text {
+      font-size: 2rem; }
+
+.about {
+  background-color: #f6f9fc;
+  grid-row: about-start / about-end;
+  grid-column: 1/-1;
+  padding: 6rem; }
+  .about_content {
+    text-align: center; }
+    .about_content .about_heading {
+      font-size: 4rem;
+      margin-bottom: 5rem; }
+    .about_content .about_text {
+      font-size: 2rem;
+      text-align: start;
+      margin-bottom: 3rem; }
+  .about_cards {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem; }
+  .about_card {
+    background-color: #fff;
+    padding: 2.5rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: all .3s; }
+    .about_card:hover {
+      transform: translateY(-1px);
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 20px 2px; }
+    .about_card .card_title {
+      font-size: 3rem;
+      margin-bottom: 2rem; }
+    .about_card .card_text {
+      font-size: 1.8rem; }
+      .about_card .card_text::after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: #aab4bd;
+        font-size: 2rem;
+        margin: 5rem auto 1.5rem auto; }
+    .about_card .card_list {
+      margin-bottom: 2rem; }
+      .about_card .card_list-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem; }
+      .about_card .card_list-items {
+        list-style: none;
+        font-size: 1.6rem; }
+      .about_card .card_list-item:not(:last-child) {
+        margin-bottom: 1rem; }
+
+.feature {
+  background-color: bisque;
+  grid-row: feature-start / feature-end;
+  grid-column: 1/-1; }
+
+.statistics {
+  background-color: #75e380;
+  grid-row: statistics-start / statistics-end;
+  grid-column: 1/-1; }
+
+.footer {
+  background-color: #e37272;
+  grid-row: footer-start / footer-end;
+  grid-column: 1/-1; }

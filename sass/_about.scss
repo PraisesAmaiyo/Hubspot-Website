@@ -1,0 +1,85 @@
+.about {
+    background-color: $color-grey-light-2;
+    grid-row: about-start / about-end;
+    grid-column: 1/-1;
+    padding: 6rem;
+
+    &_content {
+        text-align: center;
+
+        .about_heading {
+            font-size: 4rem;
+            margin-bottom: 5rem;
+        }
+
+        .about_text {
+            font-size: 2rem;
+            text-align: start;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &_cards {
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+
+
+
+    }
+
+    &_card {
+        background-color: #fff;
+        padding: 2.5rem;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        transition: all .3s;
+
+
+        &:hover {
+            transform: translateY(-1px);
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 20px 2px;
+        }
+
+        .card_title {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .card_text {
+            font-size: 1.8rem;
+
+
+            &::after {
+                content: "";
+                display: block;
+                height: 1px;
+                width: 100%;
+                background-color: $color-grey-dark-2;
+                font-size: 2rem;
+                margin: 5rem auto 1.5rem auto;
+            }
+        }
+
+        .card_list {
+            margin-bottom: 2rem;
+
+            &-title {
+                font-size: 2rem;
+                margin-bottom: 1.5rem
+            }
+
+            &-items {
+                list-style: none;
+                font-size: 1.6rem;
+
+            }
+
+            &-item {
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}

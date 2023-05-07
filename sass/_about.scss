@@ -2,7 +2,7 @@
     background-color: $color-grey-light-2;
     grid-row: about-start / about-end;
     grid-column: 1/-1;
-    padding: 6rem;
+    padding: 3rem;
 
     &_content {
         text-align: center;
@@ -10,6 +10,7 @@
         .about_heading {
             font-size: 4rem;
             margin-bottom: 5rem;
+
         }
 
         .about_text {
@@ -24,14 +25,14 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;
-
-
+        align-items: center;
+        justify-content: center;
 
     }
 
     &_card {
         background-color: #fff;
-        padding: 2.5rem;
+        padding: 2rem;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         transition: all .3s;
 
@@ -47,8 +48,13 @@
         }
 
         .card_text {
-            font-size: 1.8rem;
+            font-size: 1.7rem;
+            // letter-spacing: .8px;
 
+
+            &::last-child::after {
+                background-color: red;
+            }
 
             &::after {
                 content: "";
@@ -59,6 +65,8 @@
                 font-size: 2rem;
                 margin: 5rem auto 1.5rem auto;
             }
+
+
         }
 
         .card_list {
@@ -80,6 +88,41 @@
                     margin-bottom: 1rem;
                 }
             }
+        }
+    }
+}
+
+.article {
+    background-color: #fff;
+    margin-top: 20rem;
+    grid-column: col-start 1 / col-end 5;
+
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    gap: 1em;
+
+
+    &_images {
+        width: 100%;
+
+        &_image {
+            width: 100%;
+        }
+    }
+
+    &_content {
+        padding: 0 2rem;
+
+        &-heading {
+            font-size: 2.1rem;
+            margin-bottom: 2rem;
+        }
+
+        &-text {
+            font-size: 1.8rem;
+            margin-bottom: 4rem;
+
         }
     }
 }

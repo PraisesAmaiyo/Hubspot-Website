@@ -2,4 +2,24 @@
     background-color: bisque;
     grid-row: feature-start / feature-end;
     grid-column: 1/-1;
+    padding: 3rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+
+    &_1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        &-header {
+            margin-bottom: 1.5rem;
+
+        }
+
+        &-text {
+            font-size: 1.8rem;
+
+        }
+    }
 }

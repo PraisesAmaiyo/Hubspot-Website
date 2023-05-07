@@ -1,5 +1,88 @@
 .statistics {
-    background-color: rgb(117, 227, 128);
+    background-image: linear-gradient(to right top, rgb(23, 190, 182), rgb(77, 177, 112));
     grid-row: statistics-start / statistics-end;
     grid-column: 1/-1;
+    padding: 3rem;
+
+    &_heading {}
+
+    &_header {
+        margin-top: 7rem;
+        margin-bottom: 2rem;
+        padding: 0 10% 0 10%;
+        color: #fff;
+        text-align: center
+    }
+
+    &_text {
+        font-size: 1.8rem;
+        padding: 0 10% 0 10%;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 7rem;
+    }
+
+    &_tables {
+        padding: 3rem;
+        // display: grid;
+        // grid-template-columns: repeat(4, 1fr);
+        // grid-template-rows: repeat(2, 1fr);
+        // align-items: center;
+        // justify-content: center;
+
+        .a1 {
+            grid-row: 1/2;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .statistics_table-1,
+        .statistics_table-2 {
+            width: 100%;
+
+            display: flex;
+            gap: .1rem;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            padding: 3rem;
+        }
+
+        .statistics_table-1 {
+
+            border-bottom: 2px solid #fff;
+            border-right: 2px solid #fff;
+
+            &:last-child {
+                border-right: 0px solid #fff;
+            }
+
+            &-figure {
+                font-size: 3.5rem;
+            }
+
+            &-text {
+                font-size: 1.8rem;
+            }
+
+        }
+
+        .statistics_table-2 {
+
+            &:not(:last-child) {
+                border-right: 2px solid #fff;
+            }
+
+            &-figure {
+                font-size: 3.5rem;
+            }
+
+            &-text {
+                font-size: 1.8rem;
+            }
+
+        }
+
+    }
 }

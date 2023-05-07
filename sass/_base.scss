@@ -22,6 +22,7 @@ $bp-medium: 50em; //800px
 $bp-small: 37.5em; //600px
 $bp-smallest: 20em;
 
+
 *,
 *::before,
 *::after {
@@ -46,14 +47,13 @@ html {
 body {
 
     font-family: $font-primary;
-    font-display: swap;
     color: $color-grey-dark-1;
     font-weight: 300;
     line-height: 1.6;
 }
 
 .container {
-    width: 120rem;
+    width: 140rem;
     margin: 0 auto;
     font-size: 20px;
     display: grid;
@@ -61,5 +61,5 @@ body {
     // grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
     grid-template-columns: repeat(8, [col-start] minmax(min-content, 14rem)[col-end]);
-    grid-template-rows: [sidebar-start] 10vh [sidebar-end header-start] max-content [header-end about-start] 1fr [about-end statistics-start] 1fr [statistics-end feature-start] 1fr [feature-end footer-start] 1fr [header-end about-start];
+    grid-template-rows: [sidebar-start] 10vh [sidebar-end header-start] max-content [header-end about-start] 1fr [about-end statistics-start] max-content [statistics-end feature-start] min-content [feature-end footer-start] 1fr [header-end about-start];
 }

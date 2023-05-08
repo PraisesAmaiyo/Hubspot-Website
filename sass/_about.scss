@@ -51,11 +51,6 @@
             font-size: 1.7rem;
             // letter-spacing: .8px;
 
-
-            &::last-child::after {
-                background-color: red;
-            }
-
             &::after {
                 content: "";
                 display: block;
@@ -85,7 +80,7 @@
 
             &-item {
                 &:not(:last-child) {
-                    margin-bottom: 1rem;
+                    margin-bottom: 9rem;
                 }
             }
         }

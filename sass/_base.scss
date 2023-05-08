@@ -10,6 +10,7 @@ $color-grey-light-2: #f6f9fc;
 
 $color-grey-dark-1: #2e475d;
 $color-grey-dark-2: #aab4bd;
+$color-grey-dark-3: #9CB7CF;
 
 // FONT VARIABLES
 $font-primary: 'Nunito', sans-serif;
@@ -60,6 +61,6 @@ body {
     // grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
     // grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
-    grid-template-columns: repeat(8, [col-start] minmax(min-content, 14rem)[col-end]);
-    grid-template-rows: [sidebar-start] 10vh [sidebar-end header-start] max-content [header-end about-start] 1fr [about-end statistics-start] max-content [statistics-end feature-start] min-content [feature-end footer-start] 1fr [header-end about-start];
+    grid-template-columns: 1fr repeat(8, [col-start] minmax(min-content, 14rem)[col-end])1fr;
+    grid-template-rows: [sidebar-start] 10vh [sidebar-end header-start] max-content [header-end about-start] min-content [about-end statistics-start] max-content [statistics-end feature-start] min-content [feature-end footer-start] 1fr [footer-end];
 }

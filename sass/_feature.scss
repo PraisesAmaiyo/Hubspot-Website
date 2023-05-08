@@ -1,16 +1,21 @@
 .feature {
-    background-color: bisque;
+    background-color: $color-grey-light-1;
     grid-row: feature-start / feature-end;
     grid-column: 1/-1;
     padding: 3rem;
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
 
     &_1 {
+        margin-top: 10rem;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 40% 55%;
+        gap: 5rem;
+        align-items: center;
+        justify-content: center;
 
         &-header {
             margin-bottom: 1.5rem;
@@ -18,8 +23,56 @@
         }
 
         &-text {
-            font-size: 1.8rem;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
 
+        }
+
+        &-image {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            align-items: stretch;
+            justify-content: end;
+
+            &-1 {
+                grid-column: 1/-1;
+                grid-row: 1/2;
+                margin-bottom: 4rem;
+
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+
+            &-2 {
+                grid-column: 1/-1;
+                grid-row: 2/3;
+
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .feature-image {
+                width: 100%;
+
+            }
+        }
+    }
+
+
+    &_2 {
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: 55% 40%;
+        gap: 5rem;
+
+        align-items: center;
+        justify-content: center;
+
+        .feature-image-big {
+            width: 100%;
         }
     }
 }

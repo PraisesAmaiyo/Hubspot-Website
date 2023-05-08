@@ -3,10 +3,11 @@
     background-color: $color_secondary;
     grid-row: header-start / header-end;
     grid-column: 1/-1;
+    align-items: center;
+    padding-top: 12rem;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-
     gap: 3rem;
 
     &_content {
@@ -29,11 +30,4 @@
         width: 150%;
     }
 
-    &_btn {
-        margin-bottom: 3rem;
-
-        &-text {
-            font-size: 2rem;
-        }
-    }
 }

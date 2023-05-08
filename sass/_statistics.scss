@@ -69,6 +69,7 @@
         }
 
         .statistics_table-2 {
+            width: 100%;
 
             &:not(:last-child) {
                 border-right: 2px solid #fff;
@@ -80,6 +81,11 @@
 
             &-text {
                 font-size: 1.8rem;
+            }
+
+            &-icon1 {
+                width: 17rem;
+                height: auto;
             }
 
         }

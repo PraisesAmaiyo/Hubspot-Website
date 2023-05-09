@@ -17,7 +17,53 @@
 </head>
 
 <body class="container">
-    <div class="sidebar">Sidebar</div>
+    <section class="side">
+        <div class="sidebar_top">
+            <ul class="sidebar_top-left">
+                <li><a href="#" class="sidebar_top-left-link">English &downarrow;</a></li>
+                <li><a href="#" class="sidebar_top-left-link">High Contrast</a></li>
+                <li><a href="#" class="sidebar_top-left-link">Contact</a></li>
+            </ul>
+            <ul class="sidebar_top-right">
+                <li><a href="#" class="sidebar_top-right-link">login</a></li>
+                <p><a href="#" class="sidebar_top-right-link">Customer Support</a></p>
+                <li><a href="#" class="sidebar_top-right-link">About &downarrow;</a></li>
+            </ul>
+        </div>
+        <div class="sidebar_bot">
+            <ul class="sidebar_bot-left">
+                <a href="#" class="sidebar_bot-left-link"><img src="img/img-21.svg" alt="HubSpot logo" class="logo"></a>
+                <li><a href="#" class="sidebar_bot-left-link">Software</a></li>
+                <li><a href="#" class="sidebar_bot-left-link">Pricing</a></li>
+                <li><a href="#" class="sidebar_bot-left-link">Resources</a></li>
+            </ul>
+            <div class="sidebar_bot-right">
+                <button class="btn btn-color">Get a demo</button>
+                <button class="btn btn-white">Get started free</button>
+            </div>
+            <button class="btn btn-white click">Click</button>
+
+            <section class="sidebar_disclaimer">
+                <input type="checkbox" class="sidebar_disclaimer_checkbox" id="navi-toggle" />
+
+                <label for="navi-toggle" class="sidebar_disclaimer_button">
+                    <span class="sidebar_disclaimer_icon">&nbsp;</span>
+                </label>
+
+
+                <div class="sidebar_disclaimer-text">
+                    <h1 class="sidebar_disclaimer-text-item">
+                        Disclaimer!!! This page was build to test my HTML & Skills and does not represent
+                        the
+                        HubSpot.com brand...
+                    </h1>
+                </div>
+            </section>
+        </div>
+
+    </section>
+
+
     <header class="header">
         <div class="header_content">
             <h1 class="header_content-title">Grow better with Hubspot</h1>
@@ -43,8 +89,10 @@
     <section class="about">
         <div class="about_content">
             <h3 class="about_heading">What is HubSpot</h3>
-            <p class="about_text">HubSpot is a CRM platform with all the software, integrations, and resources you need
-                to connect marketing, sales, content management, and customer service. Each product in the platform is
+            <p class="about_text">HubSpot is a CRM platform with all the software, integrations, and resources you
+                need
+                to connect marketing, sales, content management, and customer service. Each product in the platform
+                is
                 powerful on its own, but the real magic happens when you use them together.</p>
 
             <button class="btn btn-color">Get a demo</button>
@@ -53,9 +101,11 @@
 
         <div class="about_cards">
             <div class="about_card">
-                <h4 class="card_title h4"> Marketing Hub&#8482; </h4>
-                <p class="card_text">Marketing software to help you grow traffic, convert more visitors, and run
-                    complete inbound marketing campaigns at scale.</p>
+                <div class="card_header">
+                    <h4 class="card_title h4"> Marketing Hub&#8482; </h4>
+                    <p class="card_text">Marketing software to help you grow traffic, convert more visitors, and run
+                        complete inbound marketing campaigns at scale.</p>
+                </div>
 
                 <div class="card_list">
                     <p class="card_list-title">Popular Features</p>
@@ -74,9 +124,12 @@
                 <button class="btn btn-color btn-color-long">Get a demo</button>
             </div>
             <div class="about_card">
-                <h4 class="card_title"> Sales Hub&#174; </h4>
-                <p class="card_text">Sales CRM software to help you get deeper insights into prospects, automate the
-                    tasks you hate, and close more deals faster.</p>
+                <div class="card_header">
+                    <h4 class="card_title"> Sales Hub&#174; </h4>
+                    <p class="card_text">Sales CRM software to help you get deeper insights into prospects, automate
+                        the
+                        tasks you hate, and close more deals faster.</p>
+                </div>
 
                 <div class="card_list">
                     <p class="card_list-title">Popular Features</p>
@@ -95,9 +148,12 @@
                 <button class="btn btn-color btn-color-long">Get a demo</button>
             </div>
             <div class="about_card">
-                <h4 class="card_title"> Service Hub&#8482; </h4>
-                <p class="card_text">Customer service software to help you connect with customers, exceed pectations,
-                    and turn them into promoters who grow your business.</p>
+                <div class="card_header">
+                    <h4 class="card_title"> Service Hub&#8482; </h4>
+                    <p class="card_text">Customer service software to help you connect with customers, exceed
+                        pectations,
+                        and turn them into promoters who grow your business.</p>
+                </div>
 
                 <div class="card_list">
                     <p class="card_list-title">Popular Features</p>
@@ -116,10 +172,13 @@
                 <button class="btn btn-color btn-color-long">Get a demo</button>
             </div>
             <div class="about_card">
-                <h4 class="card_title"> CMS Hub&#174</h4>
-                <p class="card_text">Content management software that’s flexible for marketers, powerful for developers,
-                    and gives customers a personalized, secure experience.</p>
+                <div class="card_header">
+                    <h4 class="card_title"> CMS Hub&#174</h4>
+                    <p class="card_text">Content management software that’s flexible for marketers, powerful for
+                        developers,
+                        and gives customers a personalized, secure experience.</p>
 
+                </div>
                 <div class="card_list">
                     <p class="card_list-title">Popular Features</p>
                     <ul class="card_list-items">
@@ -137,9 +196,12 @@
                 <button class="btn btn-color btn-color-long">Get a demo</button>
             </div>
             <div class="about_card">
-                <h4 class="card_title"> Operation Hub&#174 </h4>
-                <p class="card_text">Operations software that syncs your apps, cleans and curates customer data, and
-                    automates processes — so all your systems and teams work better together.</p>
+                <div class="card_header">
+                    <h4 class="card_title"> Operation Hub&#174 </h4>
+                    <p class="card_text">Operations software that syncs your apps, cleans and curates customer data,
+                        and
+                        automates processes — so all your systems and teams work better together.</p>
+                </div>
 
                 <div class="card_list">
                     <p class="card_list-title">Popular Features</p>
@@ -168,7 +230,8 @@
                     HubSpot's CMO on How AI Will Revolutionize Business
                 </h5>
                 <p class="article_content-text">
-                    HubSpot CMO Kipp Bodnar discusses his predictions for how AI will revolutionize the future of every
+                    HubSpot CMO Kipp Bodnar discusses his predictions for how AI will revolutionize the future of
+                    every
                     industry.
                 </p>
                 <button class="btn btn-color">Read the article</button>
@@ -293,7 +356,8 @@
         <div class="feature_1">
             <div class="feature_1-heading">
                 <h3 class="about_heading feature_1-header">167,000+</h3>
-                <p class="feature_1-text">customers in over <strong>120</strong> countries growing their businesses with
+                <p class="feature_1-text">customers in over <strong>120</strong> countries growing their businesses
+                    with
                     HubSpot</p>
             </div>
 
@@ -316,7 +380,8 @@
         <div class="feature_2">
             <div class="feature_1-heading">
                 <h4 class="card_title feature_1-header">Grow Better With HubSpot Today</h4>
-                <p class="feature_1-text">With tools to make every part of your process more human and a support team
+                <p class="feature_1-text">With tools to make every part of your process more human and a support
+                    team
                     excited to help you, getting started with HubSpot has never been easier
                     HubSpot</p>
 
@@ -382,7 +447,7 @@
                     <li><a href="#" class="footer_list">Free Business Template</a></li>
                     <li><a href="#" class="footer_list">Industry Benchmark Data</a></li>
                     <li><a href="#" class="footer_list">Software Comparisons Library</a></li>
-                    <li><a href="#" class="footer_list">Website THemes & Templates</a></li>
+                    <li><a href="#" class="footer_list">Website Themes & Templates</a></li>
                 </ul>
             </div>
 
@@ -452,10 +517,10 @@
             <p class="footer_copy-text">Copyright &copy; 2023 Hubspot, Inc</p>
             <div class="footer_copy-links">
                 <ul class="footer_copy-link">
-                    <li><a href="#" class="footer_list">Legal Stuff</a></li>
-                    <li><a href="#" class="footer_list">Privacy Policy</a></li>
-                    <li><a href="#" class="footer_list">Security</a></li>
-                    <li><a href="#" class="footer_list">Website Accesibility</a></li>
+                    <li class="footer_list"><a href="#">Legal Stuff</a></li>
+                    <li class="footer_list"><a href="#">Privacy Policy</a></li>
+                    <li class="footer_list"><a href="#">Security</a></li>
+                    <li class="footer_list"><a href="#">Website Accesibility</a></li>
                 </ul>
             </div>
         </div>
@@ -466,3 +531,4 @@
 </html>
 
 <!-- put all elements inside a new contain inwardly -->
+<!-- the main elements are centered but the container has the fukk width -->

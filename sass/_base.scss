@@ -11,6 +11,10 @@ $color-grey-light-2: #f6f9fc;
 $color-grey-dark-1: #2e475d;
 $color-grey-dark-2: #aab4bd;
 $color-grey-dark-3: #9CB7CF;
+$color-grey-dark-4: #213343;
+
+$color-hover-light: rgb(139, 244, 244);
+$color-hover-dark: rgb(37, 117, 117);
 
 // FONT VARIABLES
 $font-primary: 'Nunito', sans-serif;
@@ -61,6 +65,8 @@ body {
     // grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
     // grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
-    grid-template-columns: 1fr repeat(8, [col-start] minmax(min-content, 14rem)[col-end])1fr;
-    grid-template-rows: [sidebar-start] 10vh [sidebar-end header-start] max-content [header-end about-start] min-content [about-end statistics-start] max-content [statistics-end feature-start] min-content [feature-end footer-start] 1fr [footer-end];
+    // grid-template-columns: 1fr repeat(8, [col-start] minmax(min-content, 14rem)[col-end])1fr;
+    grid-template-columns: [left-start] 1fr[left-end center-start] min-content[center-end right-start] 1fr[right-end];
+
+    grid-template-rows: [sidebar-start] max-content [sidebar-end disclaimer-start] max-content [disclaimer-end header-start] max-content [header-end about-start] min-content [about-end statistics-start] max-content [statistics-end feature-start] min-content [feature-end footer-start] 1fr [footer-end];
 }

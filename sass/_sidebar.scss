@@ -1,5 +1,192 @@
-.sidebar {
-    background-color: rgb(186, 128, 241);
+.side {
+    background-color: $color-grey-light-2;
     grid-row: sidebar-start / sidebar-end;
-    grid-column: 1/-1;
+    grid-column: left-start/right-end;
+    padding: 3rem;
+
+    display: grid;
+    grid-template-rows: max-content max-content 1fr 1fr;
+    grid-template-columns: 1fr;
+
+    .sidebar_top {
+        grid-row: 1/2;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        padding-top: 3rem;
+
+        &-left {
+            grid-column: 1/2;
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        &-right {
+            grid-column: 2/-1;
+            justify-content: end;
+            display: flex;
+            gap: 2rem;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .sidebar_top-left-link:link,
+        .sidebar_top-left-link:visited,
+        .sidebar_top-right-link:link,
+        .sidebar_top-right-link:visited {
+            display: block;
+            font-size: 1.8rem;
+            color: $color-grey-dark-4;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .sidebar_top-left-link:hover,
+        .sidebar_top-left-link:active,
+        .sidebar_top-right-link:hover,
+        .sidebar_top-right-link:active {
+            display: block;
+            font-size: 1.8rem;
+            color: $color-hover-dark;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+    }
+
+    .sidebar_bot {
+        grid-row: 2/3;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        padding-top: 3rem;
+
+
+        &-left {
+            grid-column: 1/2;
+            display: flex;
+            gap: 4rem;
+            list-style: none;
+            justify-content: start;
+            align-items: center;
+
+            .logo {
+                display: flex;
+                width: 10rem;
+                align-items: center;
+                // height: auto;
+            }
+
+            &-link:link,
+            &-link:visited {
+                display: block;
+                display: flex;
+                align-items: center;
+                font-size: 2rem;
+                color: $color-grey-dark-4;
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+            &-link:hover,
+            &-link:active {
+                font-size: 2rem;
+                color: $color-hover-dark;
+                text-decoration: underline;
+                font-weight: 600;
+            }
+        }
+
+        &-right {
+            grid-column: 2/-1;
+            justify-content: end;
+            display: flex;
+            gap: 2rem;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        button.btn.btn-color {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            margin-bottom: 0rem;
+        }
+
+        button.btn.btn-white {
+            padding: 1.2rem 2rem;
+            font-size: 1.2rem;
+            margin-bottom: 0rem;
+            margin-right: 0rem;
+        }
+    }
+
+    button.btn.btn-white.click {
+        margin: 2rem 0;
+        padding: 2rem 4rem;
+        grid-row: 3/4;
+        font-size: 2rem;
+    }
+
+    .sidebar_disclaimer {
+        display: relative;
+        display: block;
+        grid-row: 4/ 5;
+        grid-column: 1/-1;
+        background-image: linear-gradient(to right top, rgb(23, 190, 182), rgb(77, 177, 112));
+        padding: 3rem 3rem;
+
+        &_checkbox {
+            height: 7rem;
+            width: 7rem;
+        }
+
+        &_button {
+            background-color: $color-grey-light-1;
+            height: 7rem;
+            width: 7rem;
+            position: fixed;
+            // top: 6rem;
+            // right: 6rem;
+            border-radius: 50%;
+            z-index: 2000;
+            box-shadow: 0 1rem 3rem rgba($color-grey-dark-4, .1);
+            text-align: center;
+            cursor: pointer;
+        }
+
+        &-text {
+
+            &-item {
+                color: $color-grey-light-1;
+                text-align: center;
+                font-size: 5rem;
+                font-weight: 600;
+                font-family: $font-primary;
+
+                opacity: 0;
+            }
+        }
+
+        &_checkbox:checked~&-item {
+            opacity: 1;
+            width: 100%;
+        }
+
+        // .disclaimer {
+        //     width: 10rem;
+        //     height: 10rem;
+        // }
+
+        input.disclaimer:checked+.sidebar_disclaimer {
+            color: red;
+        }
+
+        // button.btn.btn-white.click:checked+.sidebar_disclaimer {
+        //     display: block;
+        // }
+    }
 }

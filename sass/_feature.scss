@@ -1,8 +1,14 @@
-.feature {
+.features {
     background-color: $color-grey-light-1;
     grid-row: feature-start / feature-end;
     grid-column: 1/-1;
-    padding: 3rem;
+
+    display: grid;
+    grid-template-columns: 1fr 108rem 1fr;
+}
+
+.feature {
+    grid-column: 2/3;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -23,7 +29,7 @@
         }
 
         &-text {
-            font-size: 2rem;
+            font-size: 1.7rem;
             margin-bottom: 2.5rem;
 
         }

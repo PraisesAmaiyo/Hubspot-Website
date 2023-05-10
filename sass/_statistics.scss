@@ -1,13 +1,17 @@
-.statistics {
+.statistic {
     background-image: linear-gradient(to right top, rgb(23, 190, 182), rgb(77, 177, 112));
     grid-row: statistics-start / statistics-end;
     grid-column: 1/-1;
-    padding: 3rem;
 
-    &_heading {}
+    display: grid;
+    grid-template-columns: 1fr 108rem 1fr;
+}
+
+.statistics {
+    grid-column: 2/3;
 
     &_header {
-        margin-top: 7rem;
+        margin-top: 10rem;
         margin-bottom: 2rem;
         padding: 0 10% 0 10%;
         color: #fff;
@@ -23,12 +27,8 @@
     }
 
     &_tables {
+        margin-bottom: 9rem;
         padding: 3rem;
-        // display: grid;
-        // grid-template-columns: repeat(4, 1fr);
-        // grid-template-rows: repeat(2, 1fr);
-        // align-items: center;
-        // justify-content: center;
 
         .a1 {
             grid-row: 1/2;
@@ -50,7 +50,6 @@
         }
 
         .statistics_table-1 {
-
             border-bottom: 2px solid #fff;
             border-right: 2px solid #fff;
 

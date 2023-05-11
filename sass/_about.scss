@@ -4,7 +4,7 @@
     grid-column: 1/-1;
 
     display: grid;
-    grid-template-columns: 1fr 108rem 1fr;
+    grid-template-columns: 1fr 110rem 1fr;
 }
 
 .about {
@@ -32,11 +32,20 @@
     &_cards {
         margin-top: 4rem;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-column: 2/3;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
         grid-template-rows: 1fr 1fr;
         gap: 3rem;
         align-items: center;
         justify-content: center;
+
+        @media only screen and (max-width:$bp-big) {
+            grid-template-columns: repeat(2, 40rem);
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 3rem;
+            margin: 0 auto;
+            padding: 5rem;
+        }
     }
 
     &_card {
@@ -112,6 +121,10 @@
     align-items: center;
     gap: 1em;
 
+    @media only screen and (max-width:$bp-big) {
+        margin-top: 10rem;
+        gap: .5rem
+    }
 
     &_images {
         width: 100%;
@@ -119,6 +132,11 @@
 
     &_content {
         padding: 0 2rem;
+
+        @media only screen and (max-width:$bp-big) {
+            padding: 0 3rem;
+        }
+
 
         &-heading {
             font-size: 2rem;

@@ -607,7 +607,7 @@ header {
       justify-self: center; }
       @media only screen and (max-width: 50.6em) {
         .feature_2-image {
-          width: 95%;
+          width: 100%;
           margin: 0; } }
     .feature_2 .feature-image-big {
       width: 100%; }

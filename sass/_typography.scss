@@ -9,6 +9,7 @@ h4 {
     @extend %heading;
     color: $color-grey-dark-1;
     line-height: 1;
+    font-weight: 900;
 }
 
 p {
@@ -29,8 +30,7 @@ p {
     transition: all .2s;
 
     @media only screen and (max-width:$bp-medium) {
-        font-size: 1.2rem;
-        padding: 1.5rem 3rem;
+        width: 100%;
     }
 
     &-color {
@@ -61,7 +61,7 @@ p {
 
 
     &-text {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
 }

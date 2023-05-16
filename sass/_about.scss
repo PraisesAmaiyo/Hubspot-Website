@@ -4,12 +4,12 @@
     grid-column: 1/-1;
 
     display: grid;
-    grid-template-columns: 1fr 110rem 1fr;
+    grid-template-columns: 1fr 108rem 1fr;
 }
 
 .about {
     grid-column: 2/3;
-    padding: 10rem 1rem;
+    padding: 10rem 3rem;
 
 
     @media only screen and (max-width:$bp-medium) {
@@ -18,19 +18,31 @@
 
     &_content {
         text-align: center;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
 
+        @media only screen and (max-width:$bp-medium) {
+            text-align: left;
+        }
+
         .about_heading {
-            font-size: 3rem;
+            font-size: 5rem;
             margin-bottom: 4rem;
 
+            @media only screen and (max-width:$bp-medium) {
+                font-size: 4rem;
+                font-weight: 900;
+            }
         }
 
         .about_text {
-            font-size: 1.8rem;
+            font-size: 3rem;
             text-align: start;
             margin-bottom: 2.5rem;
+
+            @media only screen and (max-width:$bp-medium) {
+                font-size: 2.5rem;
+            }
         }
     }
 
@@ -44,6 +56,7 @@
         align-items: center;
         justify-content: center;
 
+
         @media only screen and (max-width:$bp-big) {
             grid-template-columns: repeat(2, 40rem);
             grid-template-rows: 1fr 1fr 1fr;
@@ -55,6 +68,7 @@
         @media only screen and (max-width:$bp-medium) {
             grid-template-columns: minmax(30rem, 50rem);
             grid-template-rows: 1fr 1fr 1fr;
+            margin-bottom: 5rem;
         }
     }
 
@@ -123,25 +137,46 @@
 
 .article {
     background-color: #fff;
-    margin-top: 15rem;
+    margin-top: 0rem;
     grid-column: col-start 1 / col-end 5;
 
     display: grid;
     grid-template-columns: repeat(2, 50%);
     align-items: center;
     gap: 1em;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    justify-self: center;
 
     @media only screen and (max-width:$bp-big) {
-        margin-top: 10rem;
+        grid-column: 1/2;
+        margin-top: 0rem;
         gap: .5rem
+    }
+
+    @media only screen and (max-width:$bp-medium) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, min-content);
+        justify-content: center;
+        width: 100%;
+        margin-top: 0rem;
     }
 
     &_images {
         width: 100%;
 
+        @media only screen and (max-width:$bp-medium) {
+            grid-row: 1/2;
+            width: 100%;
+        }
+
         .article_image {
 
             @media only screen and (max-width:$bp-largest) {
+                width: 100%;
+            }
+
+            @media only screen and (max-width:$bp-medium) {
                 width: 100%;
             }
         }
@@ -151,19 +186,26 @@
         padding: 0 2rem;
 
         @media only screen and (max-width:$bp-big) {
-            padding: 0 3rem;
+            padding: 0 5rem;
         }
 
+        @media only screen and (max-width:$bp-medium) {
+            grid-row: 2/3;
+        }
 
         &-heading {
-            font-size: 2rem;
+            font-size: 3rem;
             margin-bottom: 2rem;
         }
 
         &-text {
-            font-size: 1.5rem;
+            font-size: 2rem;
             margin-bottom: 4rem;
+        }
 
+        button {
+            width: 30rem;
+            margin-bottom: 8rem;
         }
     }
 }

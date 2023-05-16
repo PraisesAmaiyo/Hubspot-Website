@@ -11,6 +11,11 @@
     grid-column: 2/3;
     padding: 10rem 1rem;
 
+
+    @media only screen and (max-width:$bp-medium) {
+        width: 100vw;
+    }
+
     &_content {
         text-align: center;
         width: 90%;
@@ -45,6 +50,11 @@
             gap: 3rem;
             margin: 0 auto;
             padding: 5rem;
+        }
+
+        @media only screen and (max-width:$bp-medium) {
+            grid-template-columns: minmax(30rem, 50rem);
+            grid-template-rows: 1fr 1fr 1fr;
         }
     }
 
@@ -117,7 +127,7 @@
     grid-column: col-start 1 / col-end 5;
 
     display: grid;
-    grid-template-columns: min-content 1fr;
+    grid-template-columns: repeat(2, 50%);
     align-items: center;
     gap: 1em;
 
@@ -128,6 +138,13 @@
 
     &_images {
         width: 100%;
+
+        .article_image {
+
+            @media only screen and (max-width:$bp-largest) {
+                width: 100%;
+            }
+        }
     }
 
     &_content {

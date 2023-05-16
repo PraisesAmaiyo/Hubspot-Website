@@ -23,10 +23,11 @@ $font-display: 'Josefin Sans', sans-serif;
 // RESPONSIVE VARIABLES
 $bp-largest: 75em; //1200px
 $bp-large: 62.5em; //1000px
-$bp-big: 56.3em; //1000px
-$bp-medium: 50em; //800px
+$bp-big: 56.3em; //900px
+$bp-medium: 50.6em; //800px
 $bp-small: 37.5em; //600px
-$bp-smallest: 20em;
+$bp-smaller: 34.8em; //540px
+$bp-smallest: 30em;
 
 
 *,
@@ -42,10 +43,6 @@ html {
     font-size: 62.5%;
 
     @media only screen and (max-width:$bp-largest) {
-        font-size: 50%;
-    }
-
-    @media only screen and (max-width:$bp-smallest) {
         font-size: 40%;
     }
 }
@@ -61,7 +58,6 @@ body {
 .container {
     // width: 140rem;
     margin: 0 auto;
-    font-size: 20px;
     display: grid;
     // grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
     // grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [center-end] minmax(6rem, 1fr) [full-end];
@@ -73,4 +69,11 @@ body {
     // grid-template-columns: [left-start] 1fr[left-end center-start] min-content[center-end right-start] 1fr[right-end];
 
     grid-template-rows: [sidebar-start] max-content [sidebar-end disclaimer-start] max-content [disclaimer-end header-start] max-content [header-end about-start] min-content [about-end statistics-start] max-content [statistics-end feature-start] min-content [feature-end footer-start] 1fr [footer-end];
+
+    @media only screen and (max-width:$bp-medium) {
+
+        grid-template-columns: 100vw;
+    }
+
+    //
 }

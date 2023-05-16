@@ -8,7 +8,7 @@ header {
 }
 
 .header {
-    padding: 2rem;
+    padding: 5rem;
     grid-column: 2/3;
     align-items: center;
     padding-top: 12rem;
@@ -17,11 +17,30 @@ header {
     grid-template-columns: 50% 50%;
     gap: 3rem;
 
+    @media only screen and (max-width:$bp-medium) {
+        grid-column: 1fr;
+        padding-top: 9rem;
+        grid-template-columns: 1fr;
+        gap: 0rem;
+        grid-template-rows: max-content min-content;
+        justify-content: center;
+        align-items: center;
+    }
+
     &_content {
+        @media only screen and (max-width:$bp-medium) {
+            width: 90vw;
+            padding: 3rem;
+        }
+
 
         &-title {
             font-size: 4.2rem;
             margin-bottom: 1.5rem;
+
+            @media only screen and (max-width:$bp-medium) {
+                font-size: 3.8rem;
+            }
         }
 
         &-text {
@@ -31,11 +50,21 @@ header {
     }
 
     &_images {
+        display: grid;
         width: fit-content;
 
+
+        @media only screen and (max-width:$bp-medium) {
+            width: 90vw;
+            padding: 2rem;
+        }
+
         .header-image {
-            position: float;
             width: 150%;
+
+            @media only screen and (max-width:$bp-medium) {
+                width: 100%;
+            }
         }
     }
 }

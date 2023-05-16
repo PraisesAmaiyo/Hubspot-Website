@@ -2,9 +2,16 @@
     background-color: $color-grey-light-2;
     grid-row: sidebar-start / sidebar-end;
     grid-column: 1/-1;
+    padding: 2rem;
 
     display: grid;
     grid-template-columns: 1fr 108rem 1fr;
+
+    @media only screen and (max-width:$bp-medium) {
+        grid-template-columns: 80vw;
+        justify-content: center;
+        display: none;
+    }
 }
 
 .sides {
@@ -14,11 +21,15 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, min-content);
 
+    @media only screen and (max-width:$bp-medium) {
+        grid-column: 1/-1;
+    }
+
     .sidebar_top {
         grid-row: 1/2;
 
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         align-items: center;
         justify-content: center;
         padding-top: 2rem;
@@ -69,12 +80,13 @@
     .sidebar_bot {
         grid-row: 2/3;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: min-content min-content;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content;
         gap: 1.5rem;
         align-items: center;
         justify-content: center;
         padding-top: 1rem;
+        margin-bottom: 2rem;
 
 
         &-left {
@@ -85,6 +97,7 @@
             list-style: none;
             justify-content: start;
             align-items: center;
+            margin-right: auto;
 
             .logo {
                 display: flex;
@@ -149,6 +162,12 @@
 .disclaimer {
     padding: 2rem 25rem;
     grid-column: 2/3;
+
+    @media only screen and (max-width:$bp-medium) {
+        grid-column: 1/-1;
+        width: 100vw;
+        padding: 2rem 15rem;
+    }
 
     &-text {
         color: $color-grey-dark-1;

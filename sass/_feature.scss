@@ -5,6 +5,10 @@
 
     display: grid;
     grid-template-columns: 1fr 108rem 1fr;
+
+    @media only screen and (max-width:$bp-medium) {
+        grid-template-columns: min-content;
+    }
 }
 
 .feature {
@@ -15,6 +19,10 @@
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width:$bp-medium) {
+        width: 100vw;
+    }
+
     &_1 {
         margin-top: 10rem;
         display: grid;
@@ -23,14 +31,29 @@
         align-items: center;
         justify-content: center;
 
+        @media only screen and (max-width:$bp-medium) {
+            grid-template-columns: 90%;
+            grid-template-rows: repeat(2, min-content);
+            gap: 2.5rem;
+        }
+
         &-header {
             margin-bottom: 1.5rem;
+
+            @media only screen and (max-width:$bp-medium) {
+                text-align: center;
+            }
 
         }
 
         &-text {
             font-size: 1.7rem;
             margin-bottom: 2.5rem;
+
+            @media only screen and (max-width:$bp-medium) {
+                text-align: center;
+                margin-bottom: 1rem;
+            }
 
         }
 
@@ -41,6 +64,18 @@
             align-items: stretch;
             justify-content: end;
 
+            @media only screen and (max-width:$bp-medium) {
+                grid-template-rows: repeat(2, min-content);
+                justify-self: center;
+                align-self: center;
+            }
+
+            @media only screen and (max-width:$bp-smallest) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+
+            }
+
             &-1 {
                 grid-column: 1/-1;
                 grid-row: 1/2;
@@ -50,6 +85,22 @@
                 grid-template-columns: repeat(4, 1fr);
                 gap: 1rem;
                 padding: 0 1rem;
+
+                @media only screen and (max-width:$bp-medium) {
+                    grid-template-columns: repeat(4, 15rem);
+                    margin-bottom: 0rem;
+                    padding: 0rem;
+                    gap: .5rem;
+                }
+
+                @media only screen and (max-width:$bp-smallest) {
+                    grid-column: 1/2;
+                    grid-row: 1/-1;
+                    display: flex;
+                    flex-direction: column;
+                    width: 10rem;
+                    height: 10rem;
+                }
             }
 
             &-2 {
@@ -58,27 +109,67 @@
 
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
+
+                @media only screen and (max-width:$bp-medium) {
+                    grid-template-columns: repeat(4, 15rem);
+                }
+
+                @media only screen and (max-width:$bp-smallest) {
+                    grid-column: 2/3;
+                    grid-row: 1/-1;
+                    display: flex;
+                    flex-direction: column;
+                    width: 10rem;
+                    height: 10rem;
+                }
             }
 
             .feature-image {
                 width: 100%;
 
+                // @media only screen and (max-width:$bp-medium) {
+                //     width: 100%;
+                // }
             }
         }
     }
-
 
     &_2 {
         margin-top: 5rem;
         display: grid;
         grid-template-columns: 55% 40%;
         gap: 5rem;
+        padding: 5rem;
 
-        align-items: center;
         justify-content: center;
+
+        @media only screen and (max-width:$bp-medium) {
+            padding: 2rem;
+            margin-top: 0rem;
+            padding: 10rem;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, min-content);
+            justify-content: center;
+        }
+
+        &-image {
+            grid-row: 1/2;
+            display: grid;
+            justify-self: center;
+
+            @media only screen and (max-width:$bp-medium) {
+                width: 70%;
+                margin: 0;
+            }
+        }
 
         .feature-image-big {
             width: 100%;
+
+            @media only screen and (max-width:$bp-medium) {
+                width: 100%;
+                margin: 0;
+            }
         }
     }
 }
